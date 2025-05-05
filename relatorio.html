@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="menu">
+        <a href="acoes.html">Ações</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="relatorio.html">Relatório</a>
+        <a href="destaques.html">Destaques</a>
+    </nav>
+
+    <h1>Relatório de Reflorestamento</h1>
+    
+    <div class="search-container">
+        <form id="searchForm" class="search-form">
+            <div class="form-group">
+                <label for="usuario">Usuário:</label>
+                <input type="text" id="usuario" name="usuario" placeholder="Digite o nome do usuário">
+            </div>
+            
+            <div class="form-group">
+                <label for="especie">Tipo de Árvore:</label>
+                <select id="especie" name="especie">
+                    <option value="">Todos os tipos</option>
+                    <option value="Ipês">Ipês</option>
+                    <option value="Angicos">Angicos</option>
+                    <option value="Aroeiras">Aroeiras</option>
+                    <option value="Jequitibás">Jequitibás</option>
+                    <option value="Peroba do campo">Peroba do campo</option>
+                </select>
+            </div>
+            
+            <button type="submit">Buscar</button>
+            <button type="reset" id="limparBusca">Limpar</button>
+        </form>
+    </div>
+    
+    <div class="results-container">
+        <div id="resultsSummary" class="summary"></div>
+        <div id="resultsTable">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Usuário</th>
+                        <th>Espécie</th>
+                        <th>Quantidade</th>
+                        <th>Local</th>
+                        <th>Data</th>
+                    </tr>
+                </thead>
+                <tbody id="resultsBody">
+                </tbody>
+            </table>
+            <div id="noResults" class="no-results">
+                Utilize os filtros acima para buscar registros de reflorestamento
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
